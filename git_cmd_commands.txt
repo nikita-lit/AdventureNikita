@@ -3,3 +3,4 @@ git config --global user.email "nikitalitvinenko28@gmail.com"
 git init AdventureNikita
 
 git add .
+git commit -a -m "git commit test"
