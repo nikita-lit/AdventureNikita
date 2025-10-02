@@ -1,0 +1,5 @@
+git config --global user.name "nikita-lit"
+git config --global user.email "nikitalitvinenko28@gmail.com"
+git init AdventureNikita
+
+git add .
