@@ -11,6 +11,9 @@ Select * from #PersonDetails
 
 DROP TABLE #PersonDetails;
 
+SELECT name FROM tempdb..sysobjects
+WHERE name LIKE '#PersonDetails%'
+
 -- Allpool olevas SP-s luuakse ajutine tabel #PersonsDetails ja edastab andmeid ja 
 -- lõhub ajutise tabeli automaatselt peale käsu lõpule jõudmist.
 Create Procedure spCreateLocalTempTable
