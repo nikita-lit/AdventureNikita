@@ -1,4 +1,4 @@
-## Funktsioonid
+## Funktsioonid ja protseduurid
 <img width="374" height="474" alt="funcs" src="https://github.com/user-attachments/assets/4bce016f-5809-40fa-8736-bee946575f9b" />
 
 ## Trigerid
@@ -9,3 +9,4 @@
 
 ## Indeksid
 <img width="793" height="177" alt="indexes" src="https://github.com/user-attachments/assets/e477668d-b174-4cbe-aab8-6d0384ec1ab1" />
+
