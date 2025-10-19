@@ -1,6 +1,7 @@
 --//------------- 32. funktsioonid
 SELECT * FROM DimEmployee
 
+-- Inline Table Valued Function (ILTVF)
 CREATE FUNCTION fn_ILTVF_GetEmployees()
 RETURNS TABLE
 AS
@@ -10,6 +11,7 @@ RETURN (SELECT EmployeeKey, FirstName, CAST(BirthDate AS date) AS DOB
 SELECT * FROM fn_ILTVF_GetEmployees();
 
 
+-- Multi-statement table valued function (MSTVF)
 CREATE FUNCTION fn_MSTVF_GetEmployees()
 RETURNS @Table TABLE (EmployeeKey int, FirstName nvarchar(20), DOB date)
 AS
@@ -35,7 +37,6 @@ END
 EXEC sp_helptext fn_GetEmployeeNameById;
 
 
-
 ALTER FUNCTION fn_GetEmployeeNameById(@EmployeeKey int)
 RETURNS nvarchar(20)
 WITH Encryption 
@@ -46,7 +47,6 @@ BEGIN
 END
 
 EXEC sp_helptext fn_GetEmployeeNameById;
-
 
 
 ALTER FUNCTION fn_GetEmployeeNameById(@EmployeeKey int)

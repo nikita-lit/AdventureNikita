@@ -1,5 +1,6 @@
 --//------------- 34. ajutisedTabelid
 
+-- Lokaalne ajutine tabel
 CREATE TABLE #PersonDetails(Id int, Name nvarchar(20))
 
 INSERT INTO #PersonDetails VALUES (1, 'Mike')
@@ -12,8 +13,7 @@ SELECT * FROM #PersonDetails;
 SELECT Name FROM tempdb..sysobjects 
 WHERE Name LIKE '#PersonDetails%';
 
-
-
+-- Protseduuri et lokaalne ajutine tabel luua
 CREATE PROCEDURE spCreateLocalTempTable
 AS
 BEGIN
@@ -26,6 +26,6 @@ END;
 EXEC spCreateLocalTempTable;
 
 
-
+-- Globaalne ajutine tabel
 CREATE TABLE ##EmployeeDetails(Id int, Name nvarchar(20))
 SELECT * FROM ##EmployeeDetails;
